@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<include file="./Application/Home/View/Public/resouce.html" title=""/>
+	<style type="text/css">
+		#header {
+			height: 400px;
+			background:url('/zhaosheng/Public/Home/Image/list_header.png');
+		}
+		#banner {
+			height: 400px;
+			background-color: rgba(225,225,225,0);
+		}
+		#body {
+			width:1260px;
+			min-height:560px;
+			margin: 50px auto;
+
+			border-top: 6px solid #5b805f;
+		}
+		#body .breadcrumb {
+			margin: 20px auto;
+			border-radius: 0px 0px 0 0 ;
+			font-size: 18px;
+			color: #5b805f!important;
+		}
+		#body .breadcrumb a {
+			color: #5b805f!important;
+		}
+		#body .breadcrumb a:hover {
+			text-decoration: underline!important;
+		}
+		#body ul li {
+			font-size: 20px;
+			display: block;
+			width: 85%;
+			margin-left: 25px;
+			margin-top: 15px;
+		}
+		#body ul span {
+			float: right;
+		}
+		#body h1 {
+			text-align: center;
+		}
+		#body .mes {
+			display: inline-block;
+			font-size: 18px;
+			text-align: center;
+			color: #5b805f;
+			margin: 0 36px;
+		}
+		#content div {
+			padding-top: 25px;
+		}
+		#content p {
+			font-size: 20px;
+			text-indent: 2em;
+		}
+		#content img {
+			width: 1260px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container-fliud" style="width: 1920px;">
+		<include file="./Application/Home/View/Public/header.html" title=""/>
+		<div id="body">
+			<ol class="breadcrumb">
+			    <li><a href="__APP__/Home/Index/index"><?php text("index"); ?></a></li>
+			    <li><a href="__URL__/list_H/category/photo"><?php text($nav['category']);?></a></li>
+			    <li>内容</li>
+			</ol>
+			<div id="content">
+				<div>
+					<img src="{$data.url}">
+				</div>
+				<div>
+				<div style="width:600px;margin: 36px auto;">
+					<span class="mes">作者：{$data.author}</span>
+					<span class="mes">日期：{$data.update_at|date="Y-m-d",###}</span>
+				</div>
+					<span style="font-size: 20px;">
+						<p>{$data.note}</p>
+					</span>
+				</div>
+			</div>
+		</div>
+		<include file="./Application/Home/View/Public/footer.html" title=""/>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	InitNav($('#nav-wrap ul li a'));
+	AddNav($("#teachers"),$("#teachers_sub"));
+</script>
+<?php
+	function text($param){
+		switch ($param){
+			case "index":
+				echo "首页";
+				break;
+			case "academy":
+				echo "学院概况";
+				break;
+			case "platform":
+				echo "科研平台";
+				break;
+			case "teachers":
+				echo "师资力量";
+				break;
+			case "majors":
+				echo "各系介绍";
+				break;
+			case "student_organization":
+				echo "学生组织";
+				break;
+			case "for_new":
+				echo "新生服务";
+				break;
+			case "downfile":
+				echo "下载专区";
+				break;
+			case "bachelor":
+				echo "本科专业介绍";
+				break;
+			case "master":
+				echo "硕士专业介绍";
+				break;
+			case "doctor":
+				echo "博士专业介绍";
+				break;
+			case "photo":
+				echo "学生风采";
+				break;
+			case "notice":
+				echo "通知公告";
+				break;
+			case "famous":
+				echo "名师风采";
+				break;
+			case "video":
+				echo "视频点播";
+				break;
+		}
+	}
+?>

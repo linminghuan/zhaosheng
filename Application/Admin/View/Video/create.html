@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<include file="./Application/Admin/View/Public/resouce.html" title="新增视频"/>
+</head>
+<body>
+	<div class="container-fluid">
+		<include file="./Application/Admin/View/Public/header.html"/>
+		<div class="row">
+			<include file="./Application/Admin/View/Public/left_nav.html"/>
+			<div class="col-xs-10 col-sm-10 col-md-9 col-lg-9">
+				<div class="panel panel-default">
+		   			<div class="panel-body">
+		   				<div class="row">
+							<ol class="breadcrumb">
+							    <li><a href="__ROOT__/Admin/Index/index">首页</a></li>
+							    <li><a href="__ROOT__/Admin/Downfile/index">视频管理</a></li>
+							    <li>新增视频</li>
+							</ol>
+						</div>
+						<form class="form-horizontal" id="video_form" role="form" action="__URL__/insert" method="post">
+							<div class="form-group">
+								<label for="title" class="col-sm-2 control-label">视频名</label>
+								<div class="col-sm-10">
+								<input type="text" class="form-control" id="name" name="name" placeholder="请输入视频标题">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="video_url" class="col-sm-2 control-label">视频地址</label>
+								<div class="col-sm-10">
+								<input type="text" class="form-control" id="video_url" name="video_url" placeholder="请输入视频地址">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="status" class="col-sm-2 control-label">是否显示</label>
+								<div class="col-sm-2">
+									<label>
+										<input type="radio" name="status" id="status1" value="1" checked> 显示
+									</label>
+									<label>
+										<input type="radio" name="status" id="status2" value="0">不显示
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">视频封面</label>
+								<!-- 加载编辑器的容器 -->
+							    <texterea id="ue_container" name="photo_url" type="text/plain" class="col-sm-9" style="height:490px;"></texterea>
+							    <!-- 配置文件 -->
+							    <script type="text/javascript" src="__ROOT__/Application/Common/Ueditor/ueditor.config.js"></script>
+							    <!-- 编辑器源码文件 -->
+							    <script type="text/javascript" src="__ROOT__/Application/Common/Ueditor/ueditor.all.js"></script>
+							    <!-- 实例化编辑器 -->
+							    <script type="text/javascript">
+							        var ue = UE.getEditor('ue_container',{toolbars: [[
+								        'simpleupload', //单图上传
+								        'insertimage', //多图上传
+							        	]]});
+							        uParse('.ue_container', {
+									    rootPath: '../'
+									});
+							    </script>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-success">保存</button>
+								</div>
+							</div>
+							</form>
+		   			</div>
+		   		</div>
+		   	</div>
+		</div>
+		<include file="./Application/Admin/View/Public/footer.html"/>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript">
+	InitNav($('#left_nav li'),"{$category}");
+	$(function (){
+		$("#video_form").validate({
+	    	rules:{
+	    		title:{
+	    			required:true,
+	    			maxlength:255
+	    		},
+	    		status:"required",
+	    		video_url:"required",
+	    		photo_url:"required"
+	    	},
+	    	messages:{
+	    		title:{
+	    			required:"请填写视频名",
+	    			maxlength:255
+	    		},
+	    		status:"请设置是否显示",
+	    		video_url:"请输入视频地址",
+	    		photo_url:"请上传视频封面"
+	    	},
+	    });
+	});
+</script>

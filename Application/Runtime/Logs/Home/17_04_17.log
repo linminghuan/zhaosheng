@@ -1,0 +1,9 @@
+[ 2017-04-17T23:18:52+08:00 ] ::1 /zhaosheng/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'debian-sys-maint'@'localhost' (using password: YES)
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<include file="./Application/Home/View/Public/resouce.html" title=""/>
+	<style type="text/css">
+	#header {
+		height: 400px;
+		background:url('/zhaosheng/Public/Home/Image/list_header.png');
+	}
+	#banner {
+		height: 400px;
+		background-color: rgba(225,225,225,0);
+	}
+	#body {
+		width:1260px;
+		min-height:560px;
+		margin: 50px auto;
+
+		border-top: 6px solid #5b805f;
+	}
+	#body .breadcrumb {
+		margin: 20px auto;
+		border-radius: 0px 0px 0 0 ;
+		font-size: 18px;
+		color: #5b805f!important;
+	}
+	#body .breadcrumb a {
+		color: #5b805f!important;
+	}
+	#body .breadcrumb a:hover {
+		text-decoration: underline!important;
+	}
+	#body ul li {
+		font-size: 20px;
+		display: block;
+		width: 85%;
+		margin-left: 25px;
+		margin-top: 15px;
+	}
+	#body ul span {
+		float: right;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="container-fliud" style="width: 1920px;">
+		<include file="./Application/Home/View/Public/header.html" title=""/>
+		<div id="body">
+			<ol class="breadcrumb">
+			    <li><a href="__APP__/Home/Index/index"><?php text("index"); ?></a></li>
+			    <li><?php text($nav['category']); ?></li>
+			</ol>
+			<div>
+				<ul>
+					<if condition="$nav.category eq 'photo'">
+						<volist name="list" id="list">
+						<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}">
+							{$list.note}
+						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+						</volist>
+					<elseif condition="$nav.category eq 'video'" />
+						<volist name="list" id="list">
+						<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="{$list.video_url}">
+							{$list.name}
+						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+						</volist>
+					<!-- <elseif condition="$nav.category eq 'downfile'" />
+						<volist name="list" id="list">
+						<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="{$list.url}">
+							{$list.name}
+						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+						</volist> -->
+					<else />
+						<volist name="list" id="list">
+						<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}/sub_category/{$list.sub_category}">
+							{$list.title}
+						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+						</volist>
+					</if>
+					<!-- <switch name="nav.category">
+					    <case value="photo">
+					    	<volist name="list" id="list">
+							<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}">
+								{$list.note}
+							</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+							</volist>
+					    </case>
+					    <case value="video">
+					    	<volist name="list" id="list">
+							<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="{$list.video_url}">
+								{$list.name}
+							</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+							</volist>
+					    </case>
+					    <default />
+					    	<volist name="list" id="list">
+							<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}">
+								{$list.title}
+							</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
+							</volist>
+					</switch> -->
+				</ul>
+			</div>
+		</div>
+		<div class="result page" id="page">{$page}</div>
+		<include file="./Application/Home/View/Public/footer.html" title=""/>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	InitNav($('#nav-wrap ul li a'));
+	AddNav($("#teachers"),$("#teachers_sub"));
+</script>
+<?php
+	function text($param){
+		switch ($param){
+			case "index":
+				echo "首页";
+				break;
+			case "academy":
+				echo "学院概况";
+				break;
+			case "platform":
+				echo "科研平台";
+				break;
+			case "teachers":
+				echo "师资力量";
+				break;
+			case "majors":
+				echo "各系介绍";
+				break;
+			case "student_organization":
+				echo "学生组织";
+				break;
+			case "for_new":
+				echo "新生服务";
+				break;
+			case "downfile":
+				echo "下载专区";
+				break;
+			case "bachelor":
+				echo "本科专业介绍";
+				break;
+			case "master":
+				echo "硕士专业介绍";
+				break;
+			case "doctor":
+				echo "博士专业介绍";
+				break;
+			case "photo":
+				echo "学生风采";
+				break;
+			case "notice":
+				echo "通知公告";
+				break;
+			case "famous":
+				echo "名师风采";
+				break;
+			case "video":
+				echo "视频点播";
+				break;
+			case "speciality_advantage":
+				echo "专业优势";
+				break;
+			case "employment":
+				echo "就业形势";
+				break;
+		}
+	}
+?>
