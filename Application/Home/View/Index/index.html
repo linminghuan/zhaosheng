@@ -27,7 +27,6 @@
 			color: white;
 			text-align: center;
 		}
-
 		#slider-footer span {
 			float: right;
 			font-size: 18px;
@@ -54,6 +53,13 @@
 			word-break:break-word;
 			border-radius: 20px;
 		} 
+		.footnote p span {
+			display:table-cell;
+			vertical-align:bottom;
+			width: 320px;
+			height: 240px;
+			line-height: 40px;
+		}
 		#cell-right ul{
 			display: block;
 			width: 100%;
@@ -131,9 +137,9 @@
 							<div>
 								<img class="pic" src="{$photo.url}">
 								<span><a href="__URL__/content/category/photo/id/{$photo.id}">
-									<p>
+									<p><span style="">
 									{$photo.note}
-									</p>
+									</span></p>
 								</a></span>
 							</div>
 						</volist>

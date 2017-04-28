@@ -39,7 +39,6 @@
 			color: white;
 			text-align: center;
 		}
-
 		#slider-footer span {
 			float: right;
 			font-size: 18px;
@@ -66,6 +65,13 @@
 			word-break:break-word;
 			border-radius: 20px;
 		} 
+		.footnote p span {
+			display:table-cell;
+			vertical-align:bottom;
+			width: 320px;
+			height: 240px;
+			line-height: 30px;
+		}
 		#cell-right ul{
 			display: block;
 			width: 100%;
@@ -142,9 +148,9 @@
 						<?php if(is_array($photo)): $i = 0; $__LIST__ = $photo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$photo): $mod = ($i % 2 );++$i;?><div>
 								<img class="pic" src="<?php echo ($photo["url"]); ?>">
 								<span><a href="/zhaosheng/index.php/Home/Index/content/category/photo/id/<?php echo ($photo["id"]); ?>">
-									<p>
+									<p><span style="">
 									<?php echo ($photo["note"]); ?>
-									</p>
+									</span></p>
 								</a></span>
 							</div><?php endforeach; endif; else: echo "" ;endif; ?>
 					</div>

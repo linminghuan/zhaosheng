@@ -75,7 +75,7 @@
 					</ul>
 				</li> -->
 				<li><a id="majors" href="/zhaosheng/index.php/Home/Index/list_H/category/majors">各系介绍</a></li>
-				<li><a id="speciality_advantage" href="/zhaosheng/index.php/Home/Index/list_H/category/speciality_advantage">专业优势</a></li>
+				<!-- <li><a id="speciality_advantage" href="/zhaosheng/index.php/Home/Index/list_H/category/speciality_advantage">专业优势</a></li> -->
 				<li><a id="employment" href="/zhaosheng/index.php/Home/Index/list_H/category/employment">就业形势</a></li>
 				<li><a id="stuent_organization" href="/zhaosheng/index.php/Home/Index/list_H/category/student_organization">学生组织</a></li>
 				<li><a id="for_new" href="/zhaosheng/index.php/Home/Index/list_H/category/for_new">新生服务</a></li>
