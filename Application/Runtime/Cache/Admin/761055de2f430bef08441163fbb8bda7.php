@@ -76,6 +76,8 @@
 									    <option value="bachelor">本科生</option>
 									    <option value="master">硕士生</option>
 									    <option value="doctor">博士生</option>
+									    <option value="speciality_advantage">专业优势</option>
+									    <option value="employment">就业形势</option>
 									</select>
 								</div>
 								<label for="sub_category" class="col-sm-2 control-label">文章二级类型</label>
@@ -94,6 +96,9 @@
 							<div class="form-group">
 								<label for="status" class="col-sm-2 control-label">是否显示</label>
 								<div class="col-sm-2">
+									<label>
+										<input type="radio" name="status" id="status1" value="2"> 首页显示
+									</label>
 									<label>
 										<input type="radio" name="status" id="status1" value="1"> 显示
 									</label>

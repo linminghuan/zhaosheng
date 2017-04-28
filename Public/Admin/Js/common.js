@@ -1,20 +1,30 @@
 
 function InitRadio(radio,param){
 	"use strict";
-	console.log(radio);
-	if(param == 2){
-		radio[0].checked = true;
-		radio[1].checked = false;
-		radio[2].checked = false;
-	}else if(param == 1){
-		radio[0].checked = false;
-		radio[1].checked = true;
-		radio[2].checked = false;
+	if(radio.length == 3){
+		if(param == 2){
+			radio[0].checked = true;
+			radio[1].checked = false;
+			radio[2].checked = false;
+		}else if(param == 1){
+			radio[0].checked = false;
+			radio[1].checked = true;
+			radio[2].checked = false;
+		}else{
+			radio[0].checked = false;
+			radio[1].checked = false;
+			radio[2].checked = true;
+		}
 	}else{
-		radio[0].checked = false;
-		radio[1].checked = false;
-		radio[2].checked = true;
+		if(param == 1){
+			radio[0].checked = true;
+			radio[1].checked = false;
+		}else{
+			radio[0].checked = false;
+			radio[1].checked = true;
+		}
 	}
+	
 }
 
 function InitNav(li,param){
