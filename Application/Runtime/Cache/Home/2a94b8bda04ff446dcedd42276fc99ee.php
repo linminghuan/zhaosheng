@@ -70,7 +70,7 @@
 			vertical-align:bottom;
 			width: 320px;
 			height: 240px;
-			line-height: 30px;
+			line-height: 40px;
 		}
 		#cell-right ul{
 			display: block;
