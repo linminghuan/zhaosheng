@@ -26,6 +26,11 @@ class IndexController extends Controller {
     }
 
     public function list_H($category){
+        $p = 1;
+        if($_GET['p']){
+            $p = $_GET['p'];
+        }
+        $sub_category = $_GET['sub_category'];
         if($category == "downfile"){
            $model = M('downfile'); 
         }else if($category == 'photo'){
@@ -34,14 +39,9 @@ class IndexController extends Controller {
             $model = M('video');
         }else{
             $model = M('article');
+            $map['category'] = array('eq',$category);
         }
-        $p = 1;
-        if($_GET['p']){
-            $p = $_GET['p'];
-        }
-        $sub_category = $_GET['sub_category'];
-        $map['category'] = array('eq',$category);
-        $map['status'] = array('eq',1);
+        $map['status'] = array('gt',0);
         if($sub_category != ""){
             $map['sub_category'] = array('eq',$sub_category);
         }
