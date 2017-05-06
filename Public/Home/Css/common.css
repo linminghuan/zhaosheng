@@ -59,11 +59,11 @@ a {
 #footer {
 	margin-top: 110px;
 }
-分页的样式
+/* 分页的样式*/
 #page {
 	width: 1260px;
 	margin: 0 auto;
-}
+} 
 #page a {
 	display: inline-block;
 	width: 35px;
