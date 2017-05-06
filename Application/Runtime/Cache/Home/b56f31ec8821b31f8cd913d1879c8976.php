@@ -3,10 +3,11 @@
 <head>
 	
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
 	<title></title>
 	<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/zhaosheng/Public/Home/Css/common.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- 
+	<link rel="stylesheet" type="text/css" href="/zhaosheng/Public/Home/Css/common.css"> -->
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -14,6 +15,7 @@
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 	<script src="/zhaosheng/Public/Home/Js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="/zhaosheng/Public/Home/Css/common.css">
 	<style type="text/css">
 	#header {
 		height: 400px;
@@ -75,10 +77,11 @@
 					</ul>
 				</li> -->
 				<li><a id="majors" href="/zhaosheng/index.php/Home/Index/list_H/category/majors">各系介绍</a></li>
-				<!-- <li><a id="speciality_advantage" href="/zhaosheng/index.php/Home/Index/list_H/category/speciality_advantage">专业优势</a></li> -->
+				<li><a id="training_plan" href="/zhaosheng/index.php/Home/Index/list_H/category/training_plan">培养计划</a></li>
 				<li><a id="employment" href="/zhaosheng/index.php/Home/Index/list_H/category/employment">就业形势</a></li>
 				<li><a id="stuent_organization" href="/zhaosheng/index.php/Home/Index/list_H/category/student_organization">学生组织</a></li>
 				<li><a id="for_new" href="/zhaosheng/index.php/Home/Index/list_H/category/for_new">新生服务</a></li>
+				<li><a id="photo" href="/zhaosheng/index.php/Home/Index/list_H/category/photo">学生风采</a></li> 
 				<!-- <li><a id="downfile" href="/zhaosheng/index.php/Home/Index/list_H/category/downfile">下载专区</a></li> -->
 			</ul>
 		</div>
@@ -140,4 +143,4 @@
 	AddNav($("#teachers"),$("#teachers_sub"));
 </script>
 <?php
- function text($param){ switch ($param){ case "index": echo "首页"; break; case "academy": echo "学院概况"; break; case "platform": echo "科研平台"; break; case "teachers": echo "师资力量"; break; case "majors": echo "各系介绍"; break; case "student_organization": echo "学生组织"; break; case "for_new": echo "新生服务"; break; case "downfile": echo "下载专区"; break; case "bachelor": echo "本科专业介绍"; break; case "master": echo "硕士专业介绍"; break; case "doctor": echo "博士专业介绍"; break; case "photo": echo "学生风采"; break; case "notice": echo "通知公告"; break; case "famous": echo "名师风采"; break; case "video": echo "视频点播"; break; case "speciality_advantage": echo "专业优势"; break; case "employment": echo "就业形势"; break; } } ?>
+ function text($param){ switch ($param){ case "index": echo "首页"; break; case "academy": echo "学院概况"; break; case "platform": echo "科研平台"; break; case "teachers": echo "师资力量"; break; case "majors": echo "各系介绍"; break; case "student_organization": echo "学生组织"; break; case "for_new": echo "新生服务"; break; case "downfile": echo "下载专区"; break; case "bachelor": echo "本科专业介绍"; break; case "master": echo "硕士专业介绍"; break; case "doctor": echo "博士专业介绍"; break; case "photo": echo "学生风采"; break; case "notice": echo "通知公告"; break; case "famous": echo "名师风采"; break; case "video": echo "视频点播"; break; case "speciality_advantage": echo "专业优势"; break; case "employment": echo "就业形势"; break; case "training_plan": echo "培养计划"; break; } } ?>

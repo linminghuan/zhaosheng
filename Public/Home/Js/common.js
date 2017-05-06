@@ -8,10 +8,10 @@ function InitSlider(pics){
 		$("#"+this.id).children('span').attr('class','footnote');
 	});
 	pics.mouseleave(function() {
-		timer = Move(pics, 10, 2);	
+		timer = Move(pics, 40, 1);	
 		$("#"+this.id).children('span').attr('class','');
 	});
-	timer = Move(pics, 10, 2);	
+	timer = Move(pics, 40, 1);	
 }
 function InitPic(pics){
 	"use strict";
