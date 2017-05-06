@@ -3,6 +3,7 @@
 <head>
 	
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
 	<title>招生网站首页</title>
 	<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -132,8 +133,8 @@
 								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/official_staff">行政人员</a></li>
 							</ul>
 						</li> -->
-						<li><a id="majors" href="/zhaosheng/index.php/Home/Index/list_H/category/majors">各系介绍</a></li><!-- 
-						<li><a id="speciality_advantage" href="/zhaosheng/index.php/Home/Index/list_H/category/speciality_advantage">专业优势</a></li> -->
+						<li><a id="majors" href="/zhaosheng/index.php/Home/Index/list_H/category/majors">各系介绍</a></li>
+						<li><a id="training_plan" href="/zhaosheng/index.php/Home/Index/list_H/category/training_plan">培养计划</a></li>
 						<li><a id="employment" href="/zhaosheng/index.php/Home/Index/list_H/category/employment">就业形势</a></li>
 						<li><a id="stuent_organization" href="/zhaosheng/index.php/Home/Index/list_H/category/student_organization">学生组织</a></li>
 						<li><a id="for_new" href="/zhaosheng/index.php/Home/Index/list_H/category/for_new">新生服务</a></li> 
