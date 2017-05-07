@@ -1,6 +1,6 @@
-function InitSlider(pics){
+function InitSlider(pics ,picLen){
 	"use strict";
-	InitPic(pics);
+	InitPic(pics,picLen);
 	var timer;
 	window.clearInterval(timer);
 	pics.mouseenter(function() {
@@ -8,25 +8,24 @@ function InitSlider(pics){
 		$("#"+this.id).children('span').attr('class','footnote');
 	});
 	pics.mouseleave(function() {
-		timer = Move(pics, 40, 1);	
+		timer = Move(pics, 40, 1, picLen);	
 		$("#"+this.id).children('span').attr('class','');
 	});
-	timer = Move(pics, 40, 1);	
+	timer = Move(pics, 40, 1, picLen);	
 }
-function InitPic(pics){
+function InitPic(pics, picLen){
 	"use strict";
 	for( var i = 0 ; i < pics.length ; i++ ){
 		pics[i].id = "pic_"+i;
-		pics[i].style.left = i*420+'px';
+		pics[i].style.left = i*picLen+'px';
 	}
 }
-function Move(pics, rate ,speed){
+function Move(pics, rate ,speed, picLen){
 	"use strict";
 	var timer_obj = setInterval(function(){
 		for( var j = 0 ; j < pics.length ; j++ ){
-			
-			if(pics[j].style.left == '-420px' ){
-				pics[j].style.left = (pics.length-1)*420+'px';
+			if(pics[j].style.left == -picLen+"px" ){
+				pics[j].style.left = (pics.length-1)*picLen+'px';
 			}
 			var tmp = parseInt(pics[j].style.left)-speed;
 			pics[j].style.left = tmp+"px";
@@ -81,4 +80,30 @@ function AddNav(obj,obj_sub){
 	obj_sub.mouseenter(function(event) {
 		window.clearInterval(timer_nav);
 	});
+}
+//根据浏览器的宽度自动设置图片的宽高
+function AutoImgHeight(obj){
+	var picNum = $(".pic").length;
+	var width = obj.width();
+	width = width/3;
+	width = Math.floor(width);
+	//console.log(width);
+	var height = obj.css("padding-bottom");
+	//console.log(height);
+	height = height.split(".",1)[0];
+	height = height++;
+	for( var k = 0 ; k < picNum ; k++ ){
+		var picImg = $("#pic_"+k+" img");
+		picImg.css("width",width);
+		picImg.css("height",height);
+		//console.log(picObj.css("height"));
+	}
+	for( var l = 0 ; l < picNum ; l++ ){
+		var picDiv = $("#pic_"+l);
+		picDiv.css("width",width);
+		//console.log(picDiv.css("width"));
+		picDiv.css("height",height);
+		//console.log(picDiv.css("height"));
+	}
+	
 }

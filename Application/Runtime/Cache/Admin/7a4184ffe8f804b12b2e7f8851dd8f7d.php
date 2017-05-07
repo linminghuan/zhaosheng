@@ -66,6 +66,7 @@
 												    <option value="platform">科研平台</option>
 												    <option value="student_organization">学生组织</option>
 												    <option value="majors">各系介绍</option>
+												    <option value="training_plan">培养计划</option>
 												    <option value="for_new">新生服务</option>
 												    <option value="bachelor">本科生</option>
 												    <option value="master">硕士生</option>
@@ -139,6 +140,7 @@
 											    <?php case "platform": ?>科研平台<?php break;?>
 											    <?php case "student_organization": ?>学生组织<?php break;?>
 									    		<?php case "majors": ?>专业介绍<?php break;?>
+											    <?php case "training_plan": ?>培养计划<?php break;?>
 											    <?php case "for_new": ?>新生服务<?php break;?>
 											    <?php case "speciality_advantage": ?>专业优势<?php break;?>
 											    <?php case "employment": ?>就业形势<?php break; endswitch;?>

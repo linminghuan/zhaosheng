@@ -4,6 +4,10 @@
 	
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
 	<title>招生网站首页</title>
 	<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- 
@@ -23,62 +27,91 @@
 	li {
 		list-style: none;
 	}
-
+	body {
+		font-size: 10px;
+	}
 	a {
 		text-decoration: none!important;
 	}
-	#header {
+	/* #header {
 		width: 1920px;
 		height: 725px;
 		background:url('/zhaosheng/Public/Home/Image/header_background.jpg');
+	} */
+	#header {
+		width: 100%;
+		height: 0;
+		padding-bottom: 38.15%;
+		background:url('/zhaosheng/Public/Home/Image/header_background.jpg');
 	}
-	#banner {
+	/* #banner {
 		width: 1260px;
 		margin: 0 auto;
 		height: 725px;
+		background-color: rgba(225,225,225,0.6);
+	} */
+	#banner {
+		width: 66.31%;
+		height: 0;
+		padding-bottom: 38.15%;
+		margin: 0 auto;
 		background-color: rgba(225,225,225,0.6);
 	}
 	#top {
 		margin-left: 0;
 		width: 100%;
-		height: 20px;
+		height: 18px;
 		background: #55895b;
 	}
-	#nav-wrap {
-		/* margin-top: 40px; */
+	/* #nav-wrap {
+		margin-top: 40px;
 		margin-left: 0px;
 		width: 100%;
 		height: 60px;
 		background: #55895b;
-		/*border-radius: 16px;*/
+		border-radius: 16px;
 		font-family: "微软雅黑";
 		font-size: 23px; 
+	} */
+	#nav-wrap {
+		margin-left: 0;
+		width: 100%;
+		background: #55895b;
+		font-family: "微软雅黑";
+		font-size: 2.2em;
 	}
-	#nav-wrap li {
+	/* #nav-wrap li {
 		width: 140px;
 		text-align: center;
 		line-height: 60px;
 		height: 60px;
 		display: inline-block;
 		float: left;
+	} */
+	#nav-wrap li {
+		width: 11%;
+		height: 0;
+		padding-bottom: 4.76%;
+		text-align: center;
+		display: inline-block;
+		float: left;
 	}
 	/* #nav-wrap li:first-child{
 		margin-left: 50px;
 	} */
-	#nav-wrap a {
+	/* #nav-wrap a {
 		display: inline-block;
 		width: 140px;
 		color: white;
+	} */
+	#nav-wrap a {
+		display: inline-block;
+		width: 100%;
+		color: white;
+		height: 0;
+		padding-bottom: 43.85%;
 	}
-	/* #nav-wrap .sub_nav {
-		display: none;
-		width: 150px;
-		height: 500px;
-		position: relative;
-		z-index: 10;
-
-	}
-	#nav-wrap .sub_nav li {
+	/* #nav-wrap .sub_nav li {
 		height: 35px;
 		line-height: 30px;
 	}
@@ -100,63 +133,54 @@
 	}
 	#slider {
 		overflow: hidden;
-		width: 1260px;
-		height: 320px;
+		width: 100%;
+		height: 0;
+		padding-bottom: 25.39%;
 		margin-left:15px!important;
 		position: relative;
 	}
-	#slider img {
+	/* #slider div {
 		width: 420px;
 		height: 320px;
 		position: absolute;
-	}
-	#slider-footer {
-		background:#5b805f;
-		width: 1260px;
-		height:40px;
-		margin-left: 30px;
-	}
+	} */
 	#slider div {
-		width: 420px;
-		height: 320px;
+		/* width: 33.33%;
+		height: 0;
+		padding-bottom: 25.39%; */
 		position: absolute;
 	}
 	#slider div a {
 		color: white;
 		text-align: center;
 	}
-	#slider-footer span {
-		float: right;
-		font-size: 18px;
-		color: #eee;
-		line-height: 45px;
-		margin-right: 20px;
-	}
 	.footnote {
-		display: inline-block;
-		width: 400px;
-		height: 300px;
+		width:80%;
+		height:80%;
+		margin: 8% 10%;
+		position: absolute;
+		top: 0;
+		display:block;
 		opacity: 0.6;
 		background: #555;
-		margin: 10px 10px;
 		color: white;
 		font-size: 20px;
 	}
 	.footnote p {
-		display: block;
-		width: 320px;
-		height: 240px;
+		display: inline-block;
+		width: 80%;
+		height: 80%;
 		border: 1px solid #FFFFFF;
-		margin: 30px auto;
+		margin: 7% 10%;
 		word-break:break-word;
 		border-radius: 20px;
 	} 
 	.footnote p span {
-		display:table-cell;
-		vertical-align:bottom;
-		width: 320px;
-		height: 240px;
-		line-height: 40px;
+		display:inline-block;
+		text-align: center;
+		margin-top: 25%;
+		width: 100%;
+		line-height: 150%;
 	}
 	#item {
 		margin-top: 60px;
@@ -339,39 +363,33 @@
 		line-height: 32px;
 		color: white;
 	}
+	@media (max-width: 1600px) and (min-width: 1300px){
+	   
+	} 
+	@media (max-width: 1300px) and (min-width: 1100px){
+	   
+	    body {
+	    	font-size: 8px;
+	    }
+	} 
+	@media (max-width: 1100px){
+	   
+	    body {
+	    	font-size: 6px;
+	    }
+	} 
 	</style>
 </head>
-<body>
-	<div class="container-fluid">
+<body style="width:100%;">
+	<div class="container-fluid" style="width:100%;">
 		<div id="header">
 			<div class="row" id="banner">
-				<div class="row" style="height:325px; margin-left:0px;">
-					<img style="width: 1260px; " src="/zhaosheng/Public/Home/Image/title.png">
+				<div class="row" style="width:100%;height:auto;margin-left:0px;">
+					<img style="width:100%;height:auto;" src="/zhaosheng/Public/Home/Image/title.png">
 				</div>
 				<div class="row" id="top">
-					<!-- <ul>
-						<li><a id="index" href="/zhaosheng/index.php/Home/Index/index">首页</a></li>
-						<li><a id="academy" href="/zhaosheng/index.php/Home/Index/list_H/category/academy">学院概况</a></li>
-						<li><a id="platform" href="/zhaosheng/index.php/Home/Index/list_H/category/platform">科研平台</a></li>
-						<li><a id="teachers">师资力量</a>
-							<ul class="sub_nav" id="teachers_sub">
-								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/star_teacher">杰出人才</a></li>
-								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/professor">教授</a></li>
-								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/associate_professor">副教授</a></li>
-								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/instructor">讲师</a></li>
-								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/support_staff">教辅人员</a></li>
-								<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/official_staff">行政人员</a></li>
-							</ul>
-						</li>
-						<li><a id="majors" href="/zhaosheng/index.php/Home/Index/list_H/category/majors">各系介绍</a></li>
-						<li><a id="training_plan" href="/zhaosheng/index.php/Home/Index/list_H/category/training_plan">培养计划</a></li>
-						<li><a id="employment" href="/zhaosheng/index.php/Home/Index/list_H/category/employment">就业形势</a></li>
-						<li><a id="stuent_organization" href="/zhaosheng/index.php/Home/Index/list_H/category/student_organization">学生组织</a></li>
-						<li><a id="for_new" href="/zhaosheng/index.php/Home/Index/list_H/category/for_new">新生服务</a></li> 
-						<li><a id="downfile" href="/zhaosheng/index.php/Home/Index/list_H/category/downfile">下载专区</a></li>
-					</ul> -->
 				</div>
-				<div class="row">
+				<div class="row" style="width:100%;">
 					<div class="row" id="slider">
 						<?php if(is_array($photo)): $i = 0; $__LIST__ = $photo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$photo): $mod = ($i % 2 );++$i;?><div>
 								<img class="pic" src="<?php echo ($photo["url"]); ?>">
@@ -382,34 +400,18 @@
 								</a></span>
 							</div><?php endforeach; endif; else: echo "" ;endif; ?>
 					</div>
-					<!-- <div class="row">
-						<div id="slider-footer">
-							<a href="/zhaosheng/index.php/Home/Index/list_H/category/photo"><span>更多>></span></a>
-						</div>
-					</div> -->
 				</div>
 				<div class="row" id="nav-wrap">
 						<ul>
 							<li><a id="index" href="/zhaosheng/index.php/Home/Index/index">首页</a></li>
 							<li><a id="academy" href="/zhaosheng/index.php/Home/Index/list_H/category/academy">学院概况</a></li>
 							<li><a id="platform" href="/zhaosheng/index.php/Home/Index/list_H/category/platform">科研平台</a></li>
-							<!-- <li><a id="teachers">师资力量</a>
-								<ul class="sub_nav" id="teachers_sub">
-									<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/star_teacher">杰出人才</a></li>
-									<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/professor">教授</a></li>
-									<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/associate_professor">副教授</a></li>
-									<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/instructor">讲师</a></li>
-									<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/support_staff">教辅人员</a></li>
-									<li><a href="/zhaosheng/index.php/Home/Index/list_H/category/teachers/sub_category/official_staff">行政人员</a></li>
-								</ul>
-							</li> -->
 							<li><a id="majors" href="/zhaosheng/index.php/Home/Index/list_H/category/majors">各系介绍</a></li>
 							<li><a id="training_plan" href="/zhaosheng/index.php/Home/Index/list_H/category/training_plan">培养计划</a></li>
 							<li><a id="employment" href="/zhaosheng/index.php/Home/Index/list_H/category/employment">就业形势</a></li>
 							<li><a id="stuent_organization" href="/zhaosheng/index.php/Home/Index/list_H/category/student_organization">学生组织</a></li>
 							<li><a id="for_new" href="/zhaosheng/index.php/Home/Index/list_H/category/for_new">新生服务</a></li>
 							<li><a id="photo" href="/zhaosheng/index.php/Home/Index/list_H/category/photo">学生风采</a></li> 
-							<!--<li><a id="downfile" href="/zhaosheng/index.php/Home/Index/list_H/category/downfile">下载专区</a></li> -->
 						</ul>
 					</div>
 			</div>
@@ -494,10 +496,34 @@
 </body>
 </html>
 <script type="text/javascript">
+	var picLen = Math.floor($("#slider").width()/3);
 	InitNav($('#nav-wrap ul li a'),"<?php echo ($nav["category"]); ?>");
-	InitSlider($('#slider div'));
+	InitSlider($('#slider div'), picLen);
 	InitShadow($('#cell-right ul li'));
 	InitShadow($('#cell-left img'));
 	InitItemLi($("#left-item li a"));
 	AddNav($("#teachers"),$("#teachers_sub"));
+	AutoImgHeight($("#slider"));
+	AutoFontSize($("#nav-wrap"));
+	AutoScreenWidth();
+
+	function AutoFontSize(obj){
+		//console.log(obj.find("a").css("line-height"));
+		var lineHeight = obj.css("height");
+		//console.log(lineHeight);
+		obj.find("a").css("line-height",lineHeight);
+		//console.log(obj.find("a").css("line-height"));
+		
+	}
+	function AutoScreenWidth(){
+		var slider_top = $("#top");
+		var s = ""; 
+		s = document.body.clientWidth;
+		var t = Math.floor((1920-s)/100);
+		var h = parseInt(slider_top.css("height"));
+		h = h-t;
+		console.log(h);
+		slider_top.css("height",h+"px");
+		console.log(slider_top.css("height"));
+	}
 </script>
