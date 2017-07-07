@@ -4,48 +4,11 @@
 	<include file="./Application/Home/View/Public/resouce.html" title=""/>
 	<link rel="stylesheet" type="text/css" href="/zhaosheng/Public/Home/Css/common.css">
 	<style type="text/css">
-	#header {
-		height: 400px;
-		background:url('/zhaosheng/Public/Home/Image/list_header.png');
-	}
-	#banner {
-		height: 400px;
-		background-color: rgba(225,225,225,0);
-	}
-	#body {
-		width:1260px;
-		min-height:560px;
-		margin: 50px auto;
-
-		border-top: 6px solid #5b805f;
-	}
-	#body .breadcrumb {
-		margin: 20px auto;
-		border-radius: 0px 0px 0 0 ;
-		font-size: 18px;
-		color: #5b805f!important;
-	}
-	#body .breadcrumb a {
-		color: #5b805f!important;
-	}
-	#body .breadcrumb a:hover {
-		text-decoration: underline!important;
-	}
-	#body ul li {
-		font-size: 20px;
-		display: block;
-		width: 85%;
-		margin-left: 25px;
-		margin-top: 15px;
-	}
-	#body ul span {
-		float: right;
-	}
-
+	
 	</style>
 </head>
-<body>
-	<div class="container-fliud" style="width: 1920px;">
+<body style="width:100%;">
+	<div class="container-fliud" style="width: 100%;">
 		<include file="./Application/Home/View/Public/header.html" title=""/>
 		<div id="body">
 			<ol class="breadcrumb">
@@ -66,12 +29,6 @@
 							{$list.name}
 						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
 						</volist>
-					<!-- <elseif condition="$nav.category eq 'downfile'" />
-						<volist name="list" id="list">
-						<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="{$list.url}">
-							{$list.name}
-						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
-						</volist> -->
 					<else />
 						<volist name="list" id="list">
 						<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}/sub_category/{$list.sub_category}">
@@ -79,28 +36,6 @@
 						</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
 						</volist>
 					</if>
-					<!-- <switch name="nav.category">
-					    <case value="photo">
-					    	<volist name="list" id="list">
-							<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}">
-								{$list.note}
-							</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
-							</volist>
-					    </case>
-					    <case value="video">
-					    	<volist name="list" id="list">
-							<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="{$list.video_url}">
-								{$list.name}
-							</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
-							</volist>
-					    </case>
-					    <default />
-					    	<volist name="list" id="list">
-							<li><i class="fa fa-file"></i>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="__URL__/content/category/{$nav.category}/id/{$list.id}">
-								{$list.title}
-							</a><span>{$list.update_at|date="Y-m-d",###}</span></li>
-							</volist>
-					</switch> -->
 				</ul>
 			</div>
 		</div>
@@ -112,6 +47,13 @@
 <script type="text/javascript">
 	InitNav($('#nav-wrap ul li a'));
 	AddNav($("#teachers"),$("#teachers_sub"));
+	AutoLineHeight($("#nav-wrap"),"a");
+	AutoPageLineHeight($("#page a"));
+	AutoPageLineHeight($("#page .current"));
+	//当浏览器的宽度变化时自动调整行高
+	$(window).resize(function (){
+		AutoLineHeight($("#nav-wrap"));
+	});
 </script>
 <?php
 	function text($param){

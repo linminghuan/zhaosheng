@@ -9,81 +9,196 @@ li {
 a {
 	text-decoration: none!important;
 }
+body {
+	font-size: 10px;
+	font-family: "微软雅黑";
+}
 #header {
-	width: 1920px;
-	height: 785px;
-	background:url('/zhaosheng/Public/Home/Image/header_background.jpg');
+	width: 100%;
+	height: 0;
+	padding-bottom: 20%;
+}
+#head_bg {
+	position: relative;
+	margin-top: -6.5%;
+	z-index: -1;
+}
+#head_bg img {
+	width: 100%;
+	margin-top: 6%;
 }
 #banner {
-	width: 1340px;
-	margin: 0 auto;
-	height: 785px;
-	background-color: rgba(225,225,225,0.6);
+	width: 70.53%;
+	margin: -20% auto;
+	height: 0;
+	padding-bottom: 20%;
 }
 #nav-wrap {
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left: 0;
 	width: 100%;
-	height: 60px;
+	height: 0;
+	padding-bottom: 4.47%;
 	background: #55895b;
-	border-radius: 16px;
+	border-radius: 5px;
 	font-family: "微软雅黑";
-	font-size: 23px;
+	font-size: 2.3em;
 }
 #nav-wrap li {
-	width: 140px;
+	width: 10.45%;
 	text-align: center;
-	line-height: 60px;
-	height: 60px;
+	height: 0;
+	padding-bottom: 4.48%;
 	display: inline-block;
 	float: left;
 }
 #nav-wrap li:first-child{
-	margin-left: 40px;
+	margin-left: 2.99%;
 }
 #nav-wrap a {
 	display: inline-block;
-	width: 140px;
+	width: 100%;
 	color: white;
-}
-.first {
-	background: white;
-	border-radius: 16px;
-	color: black!important;
 }
 .a-active {
 	background: white;
-	border-radius: 10px;
+	border-radius: 5px;
 	color: black!important;
 }
-#footer {
-	margin-top: 110px;
+#body {
+	width: 66.31%;
+	min-height:560px;
+	margin: 9.65% auto;
+	border-top: 0.6em solid #5b805f;
 }
-/* 分页的样式*/
+#body .breadcrumb {
+	margin: 20px auto;
+	font-size: 1.8em;
+	color: #5b805f!important;
+}
+#body .breadcrumb a {
+	color: #5b805f!important;
+}
+#body .breadcrumb a:hover {
+	text-decoration: underline!important;
+}
+#body ul li {
+	font-size: 2em;
+	display: block;
+	width: 85%;
+	margin-left: 25px;
+	margin-top: 15px;
+}
+#body ul span {
+	float: right;
+}
+#body h1 {
+	text-align: center;
+	font-size: 3.6em;
+}
+#body .mes {
+	display: inline-block;
+	font-size: 1.8em;
+	text-align: center;
+	color: #5b805f;
+	margin: 0 6%;
+}
+#text {
+	padding-top: 1.99%;
+	width: 100%;
+	margin: 0 auto;
+}
+#content p {
+	color: #191818;
+	text-indent: 2em;
+}
+#content p span {
+/* 	font-size: 2em; */
+}
 #page {
-	width: 1260px;
+	width: 66.31%;
 	margin: 0 auto;
 } 
 #page a {
 	display: inline-block;
-	width: 35px;
-	height: 35px;
+	width: 2.78%;
+	height: 0;
+	padding-bottom: 2.78%;
 	border: 1px solid #5b805f;
-	border-radius: 10px;
-	margin-right: 10px;
+	border-radius: 5px;
+	margin-right: 5px;
 	text-align: center;
-	line-height: 32px;
 	color: #5b805f;
+	font-size: 1.8em;
 }
 #page .current {
 	display: inline-block;
-	width: 35px;
-	height: 35px;
+	width: 2.78%;
+	height: 0;
+	padding-bottom: 2.78%;
 	border: 1px solid #5b805f;
-	border-radius: 10px;
-	margin-right: 10px;
+	border-radius: 5px;
+	margin-right: 5px;
 	background: #5b805f;
 	text-align: center;
-	line-height: 32px;
 	color: white;
+	font-size: 1.8em;
+}
+#footer {
+	margin-top: 110px;
+}
+#footer .breadcrumb {
+	margin-top: 50px;
+	font-size: 1.8em;
+}
+#background {
+	width: 103%;
+	height: 0;
+	padding-bottom: 10%;
+	background: #838583;
+	margin-left: -0.8%;
+}
+#background div {
+	display: inline-block;
+	width: 7.47%;
+	height: 0;
+	padding-bottom: 7.47%;
+	margin-top: 1.1%;
+	margin-left: 12%;
+	float: left;
+}
+#background div img {
+	width: 100%;
+}
+#background p {
+	display: inline-block;
+	font-size: 2em;
+	font-family: "微软雅黑";
+	color: white;
+	width: 50.1%;
+	height: 0;
+	padding-bottom: 5.21%;
+	margin-top: 1.8%;
+	margin-left: 5%;
+	float: left;
+}
+@media (max-width: 1610px) and (min-width: 1400px){
+    body {
+    	font-size: 10px;
+    }
+}
+@media (max-width: 1400px) and (min-width: 1300px){
+    body {
+    	font-size: 8px;
+    }
+}  
+@media (max-width: 1500px) and (min-width: 1200px){
+    body {
+    	font-size: 7px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 800px){
+    body {
+    	font-size: 3px;
+    }
 }

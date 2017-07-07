@@ -1,3 +1,8 @@
+//全局变量
+var screenWidth = "";
+//#top自适应高度的状态标记
+var tag = 0;
+screenWidth = $(window).width();
 function InitSlider(pics ,picLen){
 	"use strict";
 	InitPic(pics,picLen);
@@ -8,10 +13,10 @@ function InitSlider(pics ,picLen){
 		$("#"+this.id).children('span').attr('class','footnote');
 	});
 	pics.mouseleave(function() {
-		timer = Move(pics, 40, 1, picLen);	
+		timer = Move(pics, 20, 1, picLen);	
 		$("#"+this.id).children('span').attr('class','');
 	});
-	timer = Move(pics, 40, 1, picLen);	
+	timer = Move(pics, 20, 1, picLen);	
 }
 function InitPic(pics, picLen){
 	"use strict";
@@ -27,7 +32,8 @@ function Move(pics, rate ,speed, picLen){
 			if(pics[j].style.left == -picLen+"px" ){
 				pics[j].style.left = (pics.length-1)*picLen+'px';
 			}
-			var tmp = parseInt(pics[j].style.left)-speed;
+			var tmp = 0;
+			tmp = parseInt(pics[j].style.left)-speed;
 			pics[j].style.left = tmp+"px";
 		}
 	},rate);
@@ -82,10 +88,9 @@ function AddNav(obj,obj_sub){
 	});
 }
 //根据浏览器的宽度自动设置图片的宽高
-function AutoImgHeight(obj){
-	var picNum = $(".pic").length;
+function AutoSliderImgHeight(obj,picNum,ratio){
 	var width = obj.width();
-	width = width/3;
+	width = width*ratio;
 	width = Math.floor(width);
 	//console.log(width);
 	var height = obj.css("padding-bottom");
@@ -106,4 +111,50 @@ function AutoImgHeight(obj){
 		//console.log(picDiv.css("height"));
 	}
 	
+}
+function AutoLineHeight(obj,child){
+	var lineHeight = obj.css("height");
+	//console.log(lineHeight);
+	obj.find(child).css("line-height",lineHeight);
+	//console.log(obj.find("a").css("line-height"));
+	
+}
+function AutoPageLineHeight(obj){
+		var h = obj.css("height");
+		console.log(h);
+		obj.css("line-height",h);
+}
+function AutoScreenWidth(slider_top){
+	var s = ""; 
+	s = document.body.clientWidth;
+	if(screenWidth>=s){
+		if(tag == 0 ){
+			var t = 0;
+			t = Math.floor((1900-s)/100);
+			var h = 0;
+			h = parseInt(slider_top.css("height"));
+			h = h-t;
+			slider_top.css("height",h+"px");
+			screenWidth=s;
+			tag++;
+		}else{
+			var t = 0;
+			t = Math.floor((screenWidth-s)/100);
+			var h = 0;
+			h = parseInt(slider_top.css("height"));
+			h = h-t;
+			slider_top.css("height",h+"px");
+			screenWidth=s;
+			tag++;
+		}
+	}else{
+		var t = 0 ;
+		t = Math.floor((s-screenWidth)/100);
+		var h = 0 ;
+		h = parseInt(slider_top.css("height"));
+		h = h+t;
+		slider_top.css("height",h+"px");
+		screenWidth=s;
+		tag++;
+	}
 }

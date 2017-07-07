@@ -4,66 +4,11 @@
 	<include file="./Application/Home/View/Public/resouce.html" title=""/>
 	<link rel="stylesheet" type="text/css" href="/zhaosheng/Public/Home/Css/common.css">
 	<style type="text/css">
-		#header {
-			height: 400px;
-			background:url('/zhaosheng/Public/Home/Image/list_header.png');
-		}
-		#banner {
-			height: 400px;
-			background-color: rgba(225,225,225,0);
-		}
-		#body {
-			width:1260px;
-			min-height:560px;
-			margin: 50px auto;
-
-			border-top: 6px solid #5b805f;
-		}
-		#body .breadcrumb {
-			margin: 20px auto;
-			border-radius: 0px 0px 0 0 ;
-			font-size: 18px;
-			color: #5b805f!important;
-		}
-		#body .breadcrumb a {
-			color: #5b805f!important;
-		}
-		#body .breadcrumb a:hover {
-			text-decoration: underline!important;
-		}
-		#body ul li {
-			font-size: 20px;
-			display: block;
-			width: 85%;
-			margin-left: 25px;
-			margin-top: 15px;
-		}
-		#body ul span {
-			float: right;
-		}
-		#body h1 {
-			text-align: center;
-		}
-		#body .mes {
-			display: inline-block;
-			font-size: 18px;
-			text-align: center;
-			color: #5b805f;
-			margin: 0 36px;
-		}
-		#content div {
-			padding-top: 25px;
-		}
-		#content p {
-			font-size: 20px;
-			color: #191818;
-			text-indent: 2em;
-		}
-
+		
 	</style>
 </head>
-<body>
-	<div class="container-fliud" style="width: 1920px;">
+<body style="width: 100%;">
+	<div class="container-fliud" style="width: 100%;">
 		<include file="./Application/Home/View/Public/header.html" title="{$nav.category}"/>
 		<div id="body">
 			<ol class="breadcrumb">
@@ -73,11 +18,11 @@
 			</ol>
 			<div id="content">
 				<h1>{$data.title}</h1>
-				<div style="width:600px;margin: 36px auto;">
+				<div style="width: 100%;margin-top: 2%;">
 					<span class="mes">作者：{$data.author}</span>
 					<span class="mes">日期：{$data.update_at|date="Y-m-d",###}</span>
 				</div>
-				<div><?php $content = html_entity_decode($data['content']);
+				<div id="text"><?php $content = html_entity_decode($data['content']);
 				echo $content;
 				?></div>
 			</div>
@@ -89,6 +34,11 @@
 <script type="text/javascript">
 	InitNav($('#nav-wrap ul li a'));
 	AddNav($("#teachers"),$("#teachers_sub"));
+	AutoLineHeight($("#nav-wrap"),"a");
+	//当浏览器的宽度变化时自动调整行高
+	$(window).resize(function (){
+		AutoLineHeight($("#nav-wrap"));
+	});
 </script>
 <?php
 	function text($param){

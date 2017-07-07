@@ -21,5 +21,4 @@ class ArticleModel extends Model {
     	return $param;
     }
 }
-
 ?>
