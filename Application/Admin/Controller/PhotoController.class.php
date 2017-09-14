@@ -44,7 +44,7 @@ class PhotoController extends AdminController{
 				$this->error('增加文章失败');
 			}
 		}else{
-			$this->error($article->getError());
+			$this->error($photo->getError());
 		}
 		/*$oldurl = $this->GetImgUrl(I('post.url'));
 		$photoName = strchr($oldurl,"Temp/");
